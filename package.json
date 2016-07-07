@@ -1,0 +1,21 @@
+{
+  "name": "detect-pointer-events",
+  "version": "0.0.0",
+  "description": "Detect if the browser supports the pointer events api",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafrex/detect-pointer-events.git"
+  },
+  "keywords": [
+    "pointer events",
+    "pointer",
+    "touch"
+  ],
+  "author": "Rafael Pedicini <code@rafrex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafrex/detect-pointer-events/issues"
+  },
+  "homepage": "https://github.com/rafrex/detect-pointer-events#readme"
+}
