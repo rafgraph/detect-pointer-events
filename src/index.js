@@ -12,7 +12,7 @@ const prefixMap = {
   maxTouchPoints: 'msMaxTouchPoints',
 };
 
-/**
+/*
  * detectPointerEvents object structure
  * const detectPointerEvents = {
  *   hasApi: boolean,
@@ -27,23 +27,26 @@ const detectPointerEvents = {
   update() {
     if (typeof window !== 'undefined') {
       if ('PointerEvent' in window) {
-        this.hasApi = true;
-        this.requiresPrefix = false;
+        detectPointerEvents.hasApi = true;
+        detectPointerEvents.requiresPrefix = false;
       } else if (window.navigator && 'msPointerEnabled' in window.navigator) {
-        this.hasApi = true;
-        this.requiresPrefix = true;
+        detectPointerEvents.hasApi = true;
+        detectPointerEvents.requiresPrefix = true;
       } else {
-        this.hasApi = false;
-        this.requiresPrefix = undefined;
+        detectPointerEvents.hasApi = false;
+        detectPointerEvents.requiresPrefix = undefined;
       }
-      this.maxTouchPoints =
-      (this.hasApi && window.navigator && window.navigator[this.prefix('maxTouchPoints')])
-      || undefined;
-      this.hasTouch = this.hasApi ? this.maxTouchPoints > 0 : undefined;
+      detectPointerEvents.maxTouchPoints =
+        (
+          detectPointerEvents.hasApi && window.navigator &&
+          window.navigator[detectPointerEvents.prefix('maxTouchPoints')]
+        ) || undefined;
+      detectPointerEvents.hasTouch =
+        detectPointerEvents.hasApi ? detectPointerEvents.maxTouchPoints > 0 : undefined;
     }
   },
   prefix(value) {
-    return (this.requiresPrefix && prefixMap[value]) || value;
+    return (detectPointerEvents.requiresPrefix && prefixMap[value]) || value;
   },
 };
 
