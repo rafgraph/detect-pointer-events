@@ -26,9 +26,12 @@ const prefixMap = {
 const detectPointerEvents = {
   update() {
     if (typeof window !== 'undefined') {
+      // reference for detection https://msdn.microsoft.com/en-us/library/dn433244(v=vs.85).aspx
       if ('PointerEvent' in window) {
         detectPointerEvents.hasApi = true;
         detectPointerEvents.requiresPrefix = false;
+
+        // reference for detection https://msdn.microsoft.com/library/hh673557(v=vs.85).aspx
       } else if (window.navigator && 'msPointerEnabled' in window.navigator) {
         detectPointerEvents.hasApi = true;
         detectPointerEvents.requiresPrefix = true;
