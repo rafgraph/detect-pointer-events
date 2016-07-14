@@ -42,7 +42,7 @@ import detectPointerEvents from 'detect-pointer-events';
 ```javascript
 // using the state
 detectPointerEvents.hasApi === true; // pointer events api is present in the browser
-detectPointerEvents.requiresPrefix === true; // use of pointer events requires the Microsoft prefix (and inconsistent capitalization)
+detectPointerEvents.requiresPrefix === true; // use of pointer events requires the Microsoft prefix
 detectPointerEvents.hasTouch === true; // pointer events running on a touch capable device
 detectPointerEvents.maxTouchPoints; // maximum number of touch points supported by the device
 
@@ -50,7 +50,7 @@ detectPointerEvents.maxTouchPoints; // maximum number of touch points supported 
 detectPointerEvents.update();
 
 // prefixing pointer events
-detectPointerEvents.prefix(value) // returns the value and only adds the prefix if requiresPrefix === true
+detectPointerEvents.prefix(value) // returns the value and only adds the prefix if requiresPrefix
 
 // for example, this will add an event listener for 'MSPointerDown' if requiresPrefix === true,
 // otherwise it will add an event listener for 'pointerdown'
