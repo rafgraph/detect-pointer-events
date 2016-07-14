@@ -56,9 +56,21 @@ detectPointerEvents.prefix(value) // returns the value and only adds the prefix 
 // otherwise it will add an event listener for 'pointerdown'
 element.addEventListener(detectPointerEvents.prefix('pointerdown'), function...)
 ```
-For reference, here is the [pointer events prefix map][prefixMap] used by the `prefix()` function.
 
-Note that if `hasApi` is `false`, then the rest of the properties are always `undefined`.
+```javascript
+/*
+ * note that if the browser that doesn't support pointer events,
+ * including when using a legacy computer and browser, the default state will be:
+ */
+const detectPointerEvents = {
+  hasApi: false,
+  requiresPrefix: undefined,
+  hasTouch: undefined,
+  maxTouchPoints: undefined,
+}
+```
+
+For reference, here is the [pointer events prefix map][prefixMap] used by the `prefix()` function.
 
 Note that the `update()` function is run once at the time of import to set the object's initial state, and generally doesn't need to be run again. If it doesn't have access to the `window`, then the state will be `undefined` (`detect-pointer-events` will not throw an error), and you will have to call the `update()` function manually at a later time to update its state.
 
