@@ -11,7 +11,7 @@ Note that `detect-pointer-events` is one of the micro state machines used by [`d
 *For more information on the pointer events api, please see [MDN's Pointer Events][mdnPointerEvents], or the [W3C Pointer Events specification][w3cSpecLatest].*
 
 
-## `detectPointerEvents` micro state machine
+### `detectPointerEvents` micro state machine
 ```javascript
 const detectPointerEvents = {
   hasApi: boolean,
@@ -27,18 +27,15 @@ const detectPointerEvents = {
 }
 ```
 
-## Installing `detect-pointer-events`
+### Installing `detect-pointer-events`
 ```terminal
 $ npm install detect-pointer-events
 ```
 
-## Importing `detect-pointer-events`
+### Using `detect-pointer-events`
 ```javascript
 import detectPointerEvents from 'detect-pointer-events';
 ```
-
-
-## Using `detect-pointer-events`
 ```javascript
 // using the state
 detectPointerEvents.hasApi === true; // pointer events api is present in the browser
@@ -75,7 +72,7 @@ For reference, here is the [pointer events prefix map][prefixMap] used by the `p
 Note that the `update()` function is run once at the time of import to set the object's initial state, and generally doesn't need to be run again. If it doesn't have access to the `window`, then the state will be `undefined` (`detect-pointer-events` will not throw an error), and you will have to call the `update()` function manually at a later time to update its state.
 
 
-## Part of the [`detect-it`][detectItRepo] family
+### Part of the [`detect-it`][detectItRepo] family
 - [`detect-it`][detectItRepo]
   - [`detect-hover`][detectHoverRepo]
   - [`detect-pointer`][detectPointerRepo]
