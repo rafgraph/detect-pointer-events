@@ -16,6 +16,7 @@
     "url": "git+https://github.com/rafrex/detect-pointer-events.git"
   },
   "keywords": [
+    "detect",
     "pointer events",
     "pointer",
     "touch"
