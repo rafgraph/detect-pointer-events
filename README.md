@@ -2,7 +2,7 @@
 
 Detect if the browser supports the pointer events api.
 
-[Live detection test][liveDetectionTest] &#8212; [view on npm][onNpm]
+[Live detection test][liveDetectionTest]
 
 Exports a reference to a singleton object (a micro state machine with an update function) with its state set to if the browser supports the pointer events api, (and if so does the api require a prefix, is it running on a touch device, and how many touch points does the device have), as well as an `update()` function which re-runs the tests and updates the object's state. There is also a `prefix(value)` function which will return the `value` and only add a prefix to it if it's required.
 
@@ -78,15 +78,16 @@ Note that the `update()` function is run once at the time of import to set the o
   - [`detect-pointer`][detectPointerRepo]
   - [`detect-touch-events`][detectTouchEventsRepo]
   - **`detect-pointer-events`**
+  - [`detect-passive-events`][detectPassiveEventsRepo]
 
 
 <!-- links -->
-[liveDetectionTest]: http://detect-it.rafrex.com/#detect-pointer-events
-[onNpm]: https://www.npmjs.com/package/detect-pointer-events
+[liveDetectionTest]: http://detect-it-v1.rafrex.com/#detect-pointer-events
 [w3cSpecLatest]: https://www.w3.org/TR/pointerevents/
 [mdnPointerEvents]: https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events
 [prefixMap]: https://github.com/rafrex/detect-pointer-events/blob/master/src/index.js#L1
-[detectItRepo]: https://github.com/rafrex/detect-it
+[detectItRepo]: https://github.com/rafrex/detect-it/tree/v1.1.0
 [detectHoverRepo]: https://github.com/rafrex/detect-hover
 [detectPointerRepo]: https://github.com/rafrex/detect-pointer
 [detectTouchEventsRepo]: https://github.com/rafrex/detect-touch-events
+[detectPassiveEventsRepo]: https://github.com/rafrex/detect-passive-events
