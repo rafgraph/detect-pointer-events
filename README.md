@@ -82,12 +82,12 @@ Note that the `update()` function is run once at the time of import to set the o
 
 
 <!-- links -->
-[liveDetectionTest]: http://detect-it-v1.rafrex.com/#detect-pointer-events
+[liveDetectionTest]: https://detect-it-v1.rafgraph.dev/#detect-pointer-events
 [w3cSpecLatest]: https://www.w3.org/TR/pointerevents/
 [mdnPointerEvents]: https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events
-[prefixMap]: https://github.com/rafrex/detect-pointer-events/blob/master/src/index.js#L1
-[detectItRepo]: https://github.com/rafrex/detect-it/tree/v1.1.0
-[detectHoverRepo]: https://github.com/rafrex/detect-hover
-[detectPointerRepo]: https://github.com/rafrex/detect-pointer
-[detectTouchEventsRepo]: https://github.com/rafrex/detect-touch-events
-[detectPassiveEventsRepo]: https://github.com/rafrex/detect-passive-events
+[prefixMap]: https://github.com/rafgraph/detect-pointer-events/blob/main/src/index.js#L1
+[detectItRepo]: https://github.com/rafgraph/detect-it/tree/v1.1.0
+[detectHoverRepo]: https://github.com/rafgraph/detect-hover
+[detectPointerRepo]: https://github.com/rafgraph/detect-pointer
+[detectTouchEventsRepo]: https://github.com/rafgraph/detect-touch-events
+[detectPassiveEventsRepo]: https://github.com/rafgraph/detect-passive-events
